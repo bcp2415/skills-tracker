@@ -25,7 +25,7 @@ public class SkillsController {
     private String formHTML = "<html>" +
             "<body>" +
             "<h2>Enter your name, and choose your three favorite programming languages: </h2>" +
-            "<form action='/form' method='POST'>" +  // submit request to /hello
+            "<form action='/result' method='POST'>" +  // submit request to /hello
             "<label for='name'>Enter your name: </label>" +
             "<br>" +
             "<input type='text' name='name'>" +
@@ -67,7 +67,7 @@ public class SkillsController {
         return formHTML;
     }
 
-    @PostMapping("form")
+    @PostMapping("result")
     public String displaySubmission(@RequestParam String name, @RequestParam String lang1, @RequestParam String lang2, @RequestParam String lang3) {
         return "<html>" +
                 "<body>" +
